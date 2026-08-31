@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
-
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 :root {
   --bg:        #000000;
   --panel:     #121212;
@@ -18,7 +16,6 @@
   --bar-h:     72px;
   --left-w:    240px;
 }
-
 body {
   background: var(--bg);
   color: var(--white);
@@ -32,8 +29,6 @@ body {
     "sidebar main"
     "bar     bar";
 }
-
-/* ── Colour swatches for thumbnails ── */
 .c1  { background: #2d4a6b; }
 .c2  { background: #6b2d4a; }
 .c3  { background: #4a6b2d; }
@@ -46,10 +41,6 @@ body {
 .c10 { background: #5f3a1e; }
 .c11 { background: #1e5f5f; }
 .c12 { background: #3d1414; }
-
-/* ══════════════════════════════════
-   SIDEBAR
-══════════════════════════════════ */
 .sidebar {
   grid-area: sidebar;
   background: var(--bg);
@@ -59,13 +50,11 @@ body {
   padding: 8px;
   overflow: hidden;
 }
-
 .sidebar-nav {
   background: var(--panel);
   border-radius: 8px;
   padding: 16px 12px;
 }
-
 .sidebar-logo {
   display: flex;
   align-items: center;
@@ -75,17 +64,14 @@ body {
   font-weight: 900;
   letter-spacing: -0.5px;
 }
-
 .sidebar-logo .logo-img {
   width: 28px;
   height: 28px;
   filter: none;
 }
-
 .sidebar-nav ul {
   list-style: none;
 }
-
 .nav-item {
   display: flex;
   align-items: center;
@@ -109,8 +95,6 @@ body {
 .nav-item:hover img { filter: invert(1); }
 .nav-item.active { color: var(--white); }
 .nav-item.active img { filter: invert(1); }
-
-/* Library */
 .sidebar-library {
   background: var(--panel);
   border-radius: 8px;
@@ -119,14 +103,12 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 .library-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px 16px 8px;
 }
-
 .library-title {
   display: flex;
   align-items: center;
@@ -144,9 +126,7 @@ body {
 }
 .library-title:hover { color: var(--white); }
 .library-title:hover img { filter: invert(1); }
-
 .library-actions { display: flex; gap: 4px; }
-
 .icon-btn {
   background: none;
   border: none;
@@ -166,7 +146,6 @@ body {
 }
 .icon-btn:hover { background: var(--hover); }
 .icon-btn:hover img { filter: invert(1); }
-
 .library-filters {
   display: flex;
   gap: 8px;
@@ -174,7 +153,6 @@ body {
   overflow-x: auto;
 }
 .library-filters::-webkit-scrollbar { display: none; }
-
 .filter-chip {
   background: var(--panel2);
   border: none;
@@ -190,7 +168,6 @@ body {
 }
 .filter-chip:hover { background: var(--hover); }
 .filter-chip.active { background: var(--white); color: var(--bg); }
-
 .library-list {
   flex: 1;
   overflow-y: auto;
@@ -198,7 +175,6 @@ body {
 }
 .library-list::-webkit-scrollbar { width: 4px; }
 .library-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
-
 .library-item {
   display: flex;
   align-items: center;
@@ -209,7 +185,6 @@ body {
   transition: background 0.15s;
 }
 .library-item:hover { background: var(--hover); }
-
 .lib-thumb {
   width: 48px;
   height: 48px;
@@ -221,7 +196,6 @@ body {
   font-size: 22px;
 }
 .lib-thumb.circle { border-radius: 50%; }
-
 .lib-meta { overflow: hidden; }
 .lib-name {
   font-size: 14px;
@@ -238,10 +212,6 @@ body {
   text-overflow: ellipsis;
   margin-top: 2px;
 }
-
-/* ══════════════════════════════════
-   MAIN
-══════════════════════════════════ */
 .main {
   grid-area: main;
   overflow-y: auto;
@@ -250,8 +220,6 @@ body {
 }
 .main::-webkit-scrollbar { width: 6px; }
 .main::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-
-/* Topbar */
 .topbar {
   position: sticky;
   top: 0;
@@ -266,9 +234,7 @@ body {
   background: rgba(18, 18, 18, 0.95);
   backdrop-filter: blur(8px);
 }
-
 .topbar-nav { display: flex; gap: 8px; }
-
 .topbar-btn {
   background: rgba(0, 0, 0, 0.7);
   border: none;
@@ -287,9 +253,7 @@ body {
   filter: invert(1);
 }
 .topbar-btn:hover { background: rgba(255, 255, 255, 0.15); }
-
 .topbar-right { display: flex; align-items: center; gap: 12px; }
-
 .topbar-pill {
   background: var(--bg);
   border: none;
@@ -304,7 +268,6 @@ body {
 }
 .topbar-pill:hover { transform: scale(1.03); }
 .topbar-pill.primary { background: var(--white); color: var(--bg); }
-
 .avatar {
   width: 32px;
   height: 32px;
@@ -317,25 +280,19 @@ body {
   font-weight: 700;
   cursor: pointer;
 }
-
-/* Content */
 .content { padding: 0 24px 24px; }
-
 .greeting {
   font-size: 28px;
   font-weight: 900;
   margin-bottom: 20px;
   letter-spacing: -0.5px;
 }
-
-/* Quick picks */
 .quick-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
   margin-bottom: 32px;
 }
-
 .quick-card {
   background: var(--panel2);
   border-radius: 4px;
@@ -349,7 +306,6 @@ body {
 }
 .quick-card:hover { background: #3a3a3a; }
 .quick-card:hover .play-overlay { opacity: 1; }
-
 .quick-thumb {
   width: 64px;
   height: 64px;
@@ -359,13 +315,10 @@ body {
   justify-content: center;
   font-size: 30px;
 }
-
 .quick-label {
   font-size: 13px;
   font-weight: 700;
 }
-
-/* Shared play overlay (quick cards) */
 .quick-card .play-overlay {
   position: absolute;
   right: 12px;
@@ -385,23 +338,18 @@ body {
   height: 18px;
   filter: invert(1) brightness(0);
 }
-
-/* Sections */
 .section { margin-bottom: 32px; }
-
 .section-header {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   margin-bottom: 16px;
 }
-
 .section-title {
   font-size: 22px;
   font-weight: 900;
   letter-spacing: -0.3px;
 }
-
 .section-link {
   font-size: 12px;
   font-weight: 700;
@@ -412,13 +360,11 @@ body {
   transition: color 0.15s;
 }
 .section-link:hover { color: var(--white); text-decoration: underline; }
-
 .cards-row {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 16px;
 }
-
 .card {
   background: var(--panel);
   border-radius: 8px;
@@ -429,7 +375,6 @@ body {
 }
 .card:hover { background: #282828; }
 .card:hover .card-play { opacity: 1; transform: translateY(0); }
-
 .card-thumb {
   width: 100%;
   aspect-ratio: 1;
@@ -443,7 +388,6 @@ body {
   overflow: hidden;
 }
 .card-thumb.circle { border-radius: 50%; }
-
 .card-play {
   position: absolute;
   bottom: 8px;
@@ -465,7 +409,6 @@ body {
   height: 18px;
   filter: brightness(0);
 }
-
 .card-name {
   font-size: 14px;
   font-weight: 700;
@@ -483,10 +426,6 @@ body {
   overflow: hidden;
   line-height: 1.5;
 }
-
-/* ══════════════════════════════════
-   PLAYER BAR
-══════════════════════════════════ */
 .player {
   grid-area: bar;
   background: #181818;
@@ -497,14 +436,12 @@ body {
   padding: 0 16px;
   gap: 16px;
 }
-
 .now-playing {
   display: flex;
   align-items: center;
   gap: 14px;
   min-width: 0;
 }
-
 .np-thumb {
   width: 56px;
   height: 56px;
@@ -516,7 +453,6 @@ body {
   justify-content: center;
   font-size: 28px;
 }
-
 .np-meta { min-width: 0; }
 .np-title {
   font-size: 13px;
@@ -536,9 +472,7 @@ body {
   cursor: pointer;
 }
 .np-title:hover, .np-artist:hover { text-decoration: underline; }
-
 .np-actions { display: flex; align-items: center; gap: 4px; }
-
 .heart-btn {
   background: none;
   border: none;
@@ -553,21 +487,17 @@ body {
 }
 .heart-btn.liked img { filter: none; }
 .heart-btn:hover img { filter: invert(1); }
-
-/* Player center */
 .player-center {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
 }
-
 .player-controls {
   display: flex;
   align-items: center;
   gap: 16px;
 }
-
 .ctrl-btn {
   background: none;
   border: none;
@@ -585,7 +515,6 @@ body {
 }
 .ctrl-btn:hover img { filter: invert(1); }
 .ctrl-btn.active img { filter: invert(44%) sepia(100%) saturate(450%) hue-rotate(100deg) brightness(95%); }
-
 .play-btn {
   background: var(--white);
   border: none;
@@ -600,8 +529,6 @@ body {
 }
 .play-btn:hover { transform: scale(1.06); }
 .play-btn img { width: 18px; height: 18px; }
-
-/* Progress */
 .progress-row {
   display: flex;
   align-items: center;
@@ -609,7 +536,6 @@ body {
   width: 100%;
   max-width: 560px;
 }
-
 .time {
   font-size: 11px;
   color: var(--muted);
@@ -617,7 +543,6 @@ body {
   min-width: 32px;
 }
 .time.end { text-align: right; }
-
 .progress-bar {
   flex: 1;
   height: 4px;
@@ -648,21 +573,17 @@ body {
   transition: opacity 0.15s;
 }
 .progress-bar:hover .progress-dot { opacity: 1; }
-
-/* Player right */
 .player-right {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 4px;
 }
-
 .volume-row {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-
 .volume-bar {
   width: 90px;
   height: 4px;
