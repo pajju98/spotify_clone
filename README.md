@@ -53,7 +53,7 @@ spotify/
 
 1. Clone the repo
    ```bash
-   git clone https://github.com/your-username/spotify_clone.git
+   git clone https://github.com/pajju98/spotify_clone.git
    ```
 2. Open `index.html` directly in your browser — no build step needed.
 
