@@ -9,7 +9,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- LEFT SIDEBAR: logo, nav links, library -->
   <aside class="sidebar">
+
     <nav class="sidebar-nav">
       <div class="sidebar-logo">
         <img src="svgs/logo.svg" alt="Spotify" class="logo-img">
@@ -24,6 +27,8 @@
         </li>
       </ul>
     </nav>
+
+    <!-- YOUR LIBRARY panel with filter chips and playlist list -->
     <div class="sidebar-library">
       <div class="library-header">
         <div class="library-title">
@@ -35,11 +40,15 @@
           </button>
         </div>
       </div>
+
+      <!-- Filter chips: Playlists / Artists / Albums -->
       <div class="library-filters">
         <button class="filter-chip active">Playlists</button>
         <button class="filter-chip">Artists</button>
         <button class="filter-chip">Albums</button>
       </div>
+
+      <!-- Scrollable list of library items -->
       <div class="library-list">
         <div class="library-item">
           <div class="lib-thumb c1">🎵</div>
@@ -99,8 +108,13 @@
         </div>
       </div>
     </div>
+
   </aside>
+
+  <!-- MAIN CONTENT AREA: topbar + scrollable content -->
   <main class="main" id="main">
+
+    <!-- Sticky topbar: back/forward nav + sign up / login -->
     <div class="topbar" id="topbar">
       <div class="topbar-nav">
         <button class="topbar-btn">
@@ -116,8 +130,13 @@
         <div class="avatar">P</div>
       </div>
     </div>
+
     <div class="content">
+
+      <!-- Greeting text is set dynamically by script.js -->
       <div class="greeting" id="greeting">Good evening</div>
+
+      <!-- Quick picks: 3-column grid of recently played shortcuts -->
       <div class="quick-grid">
         <div class="quick-card">
           <div class="quick-thumb c1">💜</div>
@@ -150,11 +169,14 @@
           <div class="play-overlay"><img src="svgs/play.svg" alt="Play"></div>
         </div>
       </div>
+
+      <!-- Section: Made For You -->
       <div class="section">
         <div class="section-header">
           <div class="section-title">Made For You</div>
           <div class="section-link">Show all</div>
         </div>
+        <!-- 5-column card grid; each card has a hover play button -->
         <div class="cards-row">
           <div class="card">
             <div class="card-thumb c1">🎵
@@ -193,6 +215,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Section: Recently Played -->
       <div class="section">
         <div class="section-header">
           <div class="section-title">Recently Played</div>
@@ -200,6 +224,7 @@
         </div>
         <div class="cards-row">
           <div class="card">
+            <!-- circle class makes artist thumbnails round -->
             <div class="card-thumb c6 circle">🎤
               <div class="card-play"><img src="svgs/play.svg" alt="Play"></div>
             </div>
@@ -236,6 +261,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Section: Popular Artists -->
       <div class="section">
         <div class="section-header">
           <div class="section-title">Popular Artists</div>
@@ -279,9 +306,14 @@
           </div>
         </div>
       </div>
+
     </div>
   </main>
+
+  <!-- BOTTOM PLAYER BAR: now playing / controls / volume -->
   <footer class="player">
+
+    <!-- Left: album art + song info + like button -->
     <div class="now-playing">
       <div class="np-thumb">🌙</div>
       <div class="np-meta">
@@ -297,14 +329,18 @@
         </button>
       </div>
     </div>
+
+    <!-- Center: shuffle / prev / play / next / repeat + progress bar -->
     <div class="player-center">
       <div class="player-controls">
         <button class="ctrl-btn" title="Shuffle"><img src="svgs/shuffle.svg" alt="Shuffle"></button>
         <button class="ctrl-btn" title="Previous"><img src="svgs/prev.svg" alt="Previous"></button>
+        <!-- id="playBtn" toggled by script.js between pause and play icon -->
         <button class="play-btn" id="playBtn" title="Pause"><img src="svgs/pause.svg" alt="Pause"></button>
         <button class="ctrl-btn" title="Next"><img src="svgs/next.svg" alt="Next"></button>
         <button class="ctrl-btn active" title="Repeat"><img src="svgs/repeat.svg" alt="Repeat"></button>
       </div>
+      <!-- Progress bar: progress-fill width shows current position -->
       <div class="progress-row">
         <span class="time">1:23</span>
         <div class="progress-bar">
@@ -315,6 +351,8 @@
         <span class="time end">3:44</span>
       </div>
     </div>
+
+    <!-- Right: queue / devices / volume -->
     <div class="player-right">
       <button class="ctrl-btn" title="Queue"><img src="svgs/queue.svg" alt="Queue"></button>
       <button class="ctrl-btn" title="Devices"><img src="svgs/devices.svg" alt="Devices"></button>
@@ -326,7 +364,9 @@
       </div>
       <button class="ctrl-btn" title="Fullscreen"><img src="svgs/fullscreen.svg" alt="Fullscreen"></button>
     </div>
+
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
